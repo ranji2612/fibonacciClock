@@ -1,0 +1,140 @@
+<html>
+<head>
+	<title>Fibonacci Clock</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" 
+      type="image/png" 
+      href="faviconBlue.png">
+	
+	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<link href='http://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
+	
+	<style>
+	/* Sticky footer styles---------------------------------------------- */
+	html {
+	  position: relative;
+	  min-height: 100%;
+	}
+	body {
+	  /* Margin bottom by footer height */
+	  margin-bottom: 40px;
+	  font-family: 'Open Sans', sans-serif;
+
+	}
+	h5{
+		font-family: 'Open Sans', sans-serif;
+	}
+	strong{
+		font-family: 'Open Sans', sans-serif;
+	}
+	.footer {
+	  overflow: hidden;
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	  /* Set the fixed height of the footer here */
+	  height: 40px;
+	  background-color: #f5f5f5;
+	}
+	.timeBox {
+		margin: 1px;
+	}
+
+
+	</style>
+	<script src="js/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+        function resize_canvas(){
+			plotTimeNow();
+        }
+	</script>
+	<script type="text/javascript">
+	
+    </script>
+	<base href="/">
+</head>
+<body onresize="resize_canvas()">
+	<div >
+	
+		<!-- Navbar -->
+		<div class="navbar navbar-default navbar-fixed-top" style="background-color:#FFF;">
+			<div class="container" >
+				<div class="navbar-headr" >
+					
+					<strong><h1 style="font-family: 'Knewave', cursive;"><center>Fibonacci Clock</center></h1></strong><br/>
+				</div>
+				<!--
+				<ul class="nav  navbar-nav navbar-right">
+					<li class="" ><a href="/new"><strong>Create Poll</strong></a></li>
+					<li class="" ><a href="/poll/5538279c873b2578416e5a3f"><strong>Cool Stats</strong></a></li>
+				</ul>
+				-->
+			</div>
+		</div>
+		<div class="container">
+			<br/><br/><br/><br/><br/>
+			
+			<div class="row">
+				<div class="col-sm-1">&nbsp;</div>
+				<div class="col-xs-12 col-sm-10"  id="outerBox" align="center">
+					<canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12" align="center">
+					<h4><i><strong>Inspired from</strong></i></h4><br/>
+					<a href="https://www.kickstarter.com/projects/basbrun/fibonacci-clock-an-open-source-clock-for-nerds-wit" target="_blank"><h4>Fibonacci Clock - An open source clock for nerds with style<br/>
+						</h4></a><h5>by Philippe Chrétien</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- -->
+	<footer class="footer">
+    	<div class="container" align="middle">
+			<p class="text-muted">
+				<p class="themeTextColor" valign="middle">
+					ranji2612@gmail.com
+				</p>
+			</p>
+		</div>
+	</footer>
+
+	<script>
+		
+	/*
+	$(document).ready( function(){
+    //Get the canvas &
+    context var c = $('#timeBox');
+    var ct = c.get(0).getContext('2d');
+    var container = $(c).parent();
+
+    //Run function when browser resizes
+    $(window).resize( respondCanvas );
+
+    function respondCanvas(){ 
+        c.attr('width', $(container).width() ); //max width
+        c.attr('height', $(container).width() ); //max height
+
+        //Call a function to redraw other content (texts, images etc)
+    }
+
+    //Initial call 
+    respondCanvas();
+
+}); */
+	</script>
+
+	<!-- Loading scripts at the end -->
+	<script src="fillColor.js"></script>
+	
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<!-- End of Scripts -->
+</body>
+</html>

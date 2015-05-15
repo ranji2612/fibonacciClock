@@ -1,0 +1,10 @@
+{
+  "name"         : "FibanocciClock",
+  "version"      : "1.0.1",
+  "description"  : "Fibanacci representation of Time",
+  "main"         : "server.js",
+  "author"       : "Ranjith Kumar",
+  "dependencies" : {
+    	"express"				: "~4.0.0"
+  }
+}
