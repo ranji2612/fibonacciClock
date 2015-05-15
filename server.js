@@ -1,5 +1,7 @@
 //Initial configuration
 var express  = require('express');
+var cc		 = require('config-multipaas');
+var config      = cc();
 var app      = express(); 								// create our app w/ express
 var port  	 = process.env.OPENSHIFT_INTERNAL_PORT || 80; 				// set the port
 
@@ -17,6 +19,6 @@ require('./app/routes/routes.js')(app);
 
 
 //Start the awesomeness
-app.listen( port ,function() {	
-	console.log('Magic happens on port ',port); 
+app.listen( config.get('PORT'), config.get('IP'), function() {	
+	console.log('Magic happens on port ',config.get('PORT'), config.get('IP')); 
 });
