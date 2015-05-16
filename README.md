@@ -36,3 +36,7 @@ Say, the time is *4:30* (oh, yes it cant distinguish AM/PM)
 Hours 3 + 1 and for minutes its 5 + 1 (in an analog clock, the minute arm will be at 6. So basically the Min/5)
 So we can have the same 1 being used for both Hours and Mins so the final colors would be
 > 3 - Red, 1 - Blue, 5 - Green
+
+Open Source
+-----
+Licensed under **MIT License**
