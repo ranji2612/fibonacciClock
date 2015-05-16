@@ -1,7 +1,7 @@
 Fibanocci Clock
 ===============
-
-<div id="outerBox" align="center" style="width:320px"><a href="http://fibonacciclock-ranji2612.rhcloud.com/" target="_blank" style="text-decoration: none;"><canvas id="myCanvas" width="800" height="500" style="border:0px solid #EEE;">Your browser does not support the HTML5 canvas tag.</canvas><strong>Fibonacci Clock</strong></a></div><script src="http://fibonacciclock-ranji2612.rhcloud.com/fillColor.js" type="text/javascript"></script>
+Fibonacci Clock showing time (06:20)
+![Sample Fibonacci Clock](https://raw.githubusercontent.com/ranji2612/fibonacciClock/master/public/sample.PNG)
 
 Time shown in a geeky fibonacci clock. A fun, geeky and an awesome way of showing time.
 
@@ -18,13 +18,14 @@ How it works
 
 As the FIbonacci Number goes 1,1,2,3,5 .. There are these blocks, which add up to a max of 12. And each squares represent the value corresponding to its size.
 
-Colors are used for distingush the squares used for the hours and minutes. So what if a square is used for both, well we give a common color which represents that its used for both. The color chart is below.
+Colors are used for distingush the squares used for the hours and minutes. So what if a square is used for both, well we give a common color which represents that its used for both. And finally white for the block not being used. The color chart is below.
 
 | Color | Represents |
 |-----------|-------------|
 | Red | Hours |
 | Green | Minutes |
 | Blue | Used in Both |
+| White | Not used |
 
 Examples
 --------
