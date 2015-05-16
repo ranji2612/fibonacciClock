@@ -1,6 +1,8 @@
 Fibanocci Clock
 ===============
 
+<div id="outerBox" align="center" style="width:320px"><a href="http://fibonacciclock-ranji2612.rhcloud.com/" target="_blank" style="text-decoration: none;"><canvas id="myCanvas" width="800" height="500" style="border:0px solid #EEE;">Your browser does not support the HTML5 canvas tag.</canvas><strong>Fibonacci Clock</strong></a></div><script src="http://fibonacciclock-ranji2612.rhcloud.com/fillColor.js" type="text/javascript"></script>
+
 Time shown in a geeky fibonacci clock. A fun, geeky and an awesome way of showing time.
 
 >Hosted at http://fibonacciclock-ranji2612.rhcloud.com/
