@@ -48,14 +48,32 @@
 	.timeBox {
 		margin: 1px;
 	}
-		.white {
-			color: #EEE;
-		}
-		.embedButton {
-			border: 1px solid #f5f5f5;
-			background-color: #222;
-			color: #EEE;
-		}
+	.white {
+		color: #EEE;
+	}
+	.embedButton {
+		border: 1px solid #f5f5f5;
+		background-color: #222;
+		color: #EEE;
+	}
+	.redBox {
+		border: 1px solid #F00;
+		border-radius: 0;
+		background-color: #F00;
+		color: #f5f5f5;
+	}
+	.blueBox {
+		border: 1px solid #00F;
+		border-radius: 0;
+		background-color: #00F;
+		color: #f5f5f5;
+	}
+	.greenBox {
+		border: 1px solid #0F0;
+		border-radius: 0;
+		background-color: #0F0;
+		color: #f5f5f5;
+	}
 
 
 	</style>
@@ -82,15 +100,6 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	
-	<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MDD5T4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MDD5T4');</script>
-<!-- End Google Tag Manager -->
 	<div >
 	
 		<!-- Navbar -->
@@ -112,20 +121,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<br/><br/><br/><br/><br/>
 			
 			<div class="row">
-				<div class="col-sm-1">&nbsp;</div>
-				<div class="col-xs-12 col-sm-10"  id="outerBox" align="center">
+				<div class="col-xs-12 col-sm-12"  id="outerBox" align="center">
 					<canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
 				</div>
-				<div class="col-sm-1"></div>
 			</div>
+			<!--
+			<div class="row" align="center">
+				<div class="col-xs-12 col-sm-4" align="center">
+					<p class="redBox" style="width:80px;">HOURS</p>
+				</div>
+				<div class="col-xs-12 col-sm-4" align="center">
+					<p class="greenBox" style="width:80px;">MINUTES</p>
+				</div>
+				<div class="col-xs-12 col-sm-4" align="center">
+					<p class="blueBox" style="width:80px;">BOTH</p>
+				</div>
+			</div>
+			-->
 			<div class="row">
-				<div class="col-sm-6" align="center">
+				<div class="col-xs-12 col-sm-6" align="center">
 					<h4><i><strong>Inspired from</strong></i></h4>
 					<a href="https://www.kickstarter.com/projects/basbrun/fibonacci-clock-an-open-source-clock-for-nerds-wit" target="_blank"><h4><strong>Fibonacci Clock - An open source clock for nerds with style</strong> - by Philippe Chrétien</h4></a><br/>
 				</div>
-				<div class="col-sm-6" align="center">
+				<div class="col-xs-12 col-sm-6" align="center">
 					<div class="row">
 					<div class="col-sm-12">
 						<h4><strong>Share</strong></h4>
@@ -161,10 +181,7 @@ Your browser does not support the HTML5 canvas tag.
 								Copy & paste the code below for embedding in your site.. <br/>
 								  <blockquote>
 								  <p class="highlight" style="font-size:12px;">
-									 &lt;div id="outerBox" align="center" style="width:320px"&gt;
-									&lt;canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;"&gt;Your browser does not support the HTML5 canvas tag.&lt;/canvas&gt;Fibonacci Clock
-								&lt;/div&gt;
-								&lt;script src="http://fibonacciclock-ranji2612.rhcloud.com/fillColor.js" type="text/javascript"&gt;&lt;/script&gt; 
+									&lt;div id="outerBox" align="center" style="width:320px"&gt;&lt;a href="http://fibonacciclock-ranji2612.rhcloud.com/" target="_blank" style="text-decoration: none;"&gt;&lt;canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;"&gt;Your browser does not support the HTML5 canvas tag.&lt;/canvas&gt;&lt;strong&gt;Fibonacci Clock&lt;/strong&gt;&lt;/a&gt;&lt;/div&gt;&lt;script src="http://fibonacciclock-ranji2612.rhcloud.com/fillColor.js" type="text/javascript"&gt;&lt;/script&gt; 
 								</p>
 								</blockquote>
 							  </div>
@@ -211,7 +228,18 @@ Your browser does not support the HTML5 canvas tag.
 	<!-- Place this tag in your head or just before your close body tag. -->
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 
-	
+		<!-- Google Analytics -->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-33239140-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
 	<!-- End of Scripts -->
 </body>
 </html>
