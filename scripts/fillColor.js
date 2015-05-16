@@ -83,7 +83,7 @@ var plotTimeNow = function() {
 	console.log('Time updated at ',Date.now());
 			
 	var d = new Date();
-	var hList = getFibonacciNumbers( d.getHours());
+	var hList = getFibonacciNumbers( d.getHours()%12);
 	var mList = getFibonacciNumbers( parseInt(d.getMinutes()/5));
 	var resColor = getOverlap(hList, '#F00', mList,'#0F0','#00F');
 	drawClock(resColor);
