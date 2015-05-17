@@ -2,12 +2,12 @@
 <head>
 	<title>Fibonacci Clock</title>
 	<meta charset="utf-8">
-	<!--  Meta tags for sharing
+	<!--  Meta tags for sharing -->
 	<meta property="og:title" content="Fibonacci Clock"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:description" content="Time shown in a geeky fibonacci clock. A fun, geeky and an awesome way of showing time. "/>
-	<meta property="og:image" content="https://simplesharebuttons-skittlwebsolutio.netdna-ssl.com/wp-content/uploads/2014/08/simple-share-buttons-logo-square.png"/><meta>
-	-->
+	<meta property="og:description" content="Time shown in a geeky fibonacci clock. A fun, cool and an awesome way of showing time. "/>
+	<meta property="og:image" content="favicon32.png"/><meta>
+	<!---->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<link rel="icon" 
@@ -28,6 +28,7 @@
 	  /* Margin bottom by footer height */
 	  margin-bottom: 40px;
 	  font-family: 'Open Sans', sans-serif;
+	  overflow-x: hidden;
 
 	}
 	h5{
@@ -56,32 +57,25 @@
 		background-color: #222;
 		color: #EEE;
 	}
-	.redBox {
-		border: 1px solid #F00;
-		border-radius: 0;
-		background-color: #F00;
-		color: #f5f5f5;
+	.sectionTitle {
+		font-weight: 100;
+		text-align: left;
+		border-bottom: 2px solid #0A0;
+		padding-top: 20px;
+		padding-bottom: 5px;
 	}
-	.blueBox {
-		border: 1px solid #00F;
-		border-radius: 0;
-		background-color: #00F;
-		color: #f5f5f5;
-	}
-	.greenBox {
-		border: 1px solid #0F0;
-		border-radius: 0;
-		background-color: #0F0;
-		color: #f5f5f5;
-	}
-
 
 	</style>
 	<script src="js/jquery.min.js"></script>
 	
-	<script type="text/javascript">
-        function resize_canvas(){
+	<script language="javascript" type="text/javascript">
+	function resizeIframe() {
+		document.getElementById('iframe').height = 0.75 * document.getElementById('iframe').offsetWidth;
+		
+	}
+    function resize_canvas(){
 			plotTimeNow();
+			resizeIframe();
         }
 	</script>
 	<script type="text/javascript">
@@ -117,91 +111,111 @@
 				-->
 			</div>
 		</div>
-		<div class="container">
+		
+		<div class="container" >
 			<br/><br/><br/><br/><br/>
 			
 			<div class="row">
-				<div class="col-xs-12 col-sm-12"  id="outerBox" align="center">
-					<canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;">
-Your browser does not support the HTML5 canvas tag.
-</canvas>
+			<div class="col-xs-12 col-sm-12 col-md-8">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12"  id="outerBox" align="center">
+						<br/><br/>
+						<canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;">
+	Your browser does not support the HTML5 canvas tag.
+	</canvas>
+					</div>
 				</div>
 			</div>
-			<!--
-			<div class="row" align="center">
-				<div class="col-xs-12 col-sm-4" align="center">
-					<p class="redBox" style="width:80px;">HOURS</p>
-				</div>
-				<div class="col-xs-12 col-sm-4" align="center">
-					<p class="greenBox" style="width:80px;">MINUTES</p>
-				</div>
-				<div class="col-xs-12 col-sm-4" align="center">
-					<p class="blueBox" style="width:80px;">BOTH</p>
-				</div>
-			</div>
-			-->
+			<div class="col-xs-12 col-sm-12 col-md-4">
 			<div class="row">
-				<div class="col-xs-12 col-sm-6" align="center">
-					<h4><i><strong>Inspired from</strong></i></h4>
-					<a href="https://www.kickstarter.com/projects/basbrun/fibonacci-clock-an-open-source-clock-for-nerds-wit" target="_blank"><h4><strong>Fibonacci Clock - An open source clock for nerds with style</strong> - by Philippe Chrétien</h4></a><br/>
-				</div>
-				<div class="col-xs-12 col-sm-6" align="center">
+				
+				<div class="col-xs-12 col-sm-12" align="center">
 					<div class="row">
 					<div class="col-sm-12">
-						<h4><strong>Share</strong></h4>
+						<h4 class="sectionTitle">Share</h4>
 						<div id="share-buttons">
 
-						<!-- Facebook -->
-						<div class="fb-share-button" data-href="http://fibonacciclock-ranji2612.rhcloud.com/" data-layout="button_count"></div> &nbsp;&nbsp;
+							<!-- Facebook -->
+							<div class="fb-share-button" data-href="http://fibonacciclock-ranji2612.rhcloud.com/" data-layout="button_count"></div> &nbsp;&nbsp;
 
-						<!-- Twitter -->
-						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://fibonacciclock-ranji2612.rhcloud.com/" data-text="Check this awesome Fibonacci Clock" data-via="ranji2612">Tweet</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>&nbsp;&nbsp;
+							<!-- Twitter -->
+							<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://fibonacciclock-ranji2612.rhcloud.com/" data-text="Check this awesome Fibonacci Clock" data-via="ranji2612">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>&nbsp;&nbsp;
 
-						<!-- Google+ -->
-						<!-- Place this tag where you want the share button to render. -->
-						<div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://fibonacciclock-ranji2612.rhcloud.com/"></div>
-					</div>
+							<!-- Google+ -->
+							<!-- Place this tag where you want the share button to render. -->
+							<div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://fibonacciclock-ranji2612.rhcloud.com/"></div>
+							
+							<!-- GitHub 
+							&nbsp;&nbsp;<iframe src="https://ghbtns.com/github-btn.html?user=ranji2612&repo=fibonacciclock&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe> -->
+							
+							<!-- Digg -->
+							<!-- Reddit -->
+							<!-- LinkedIn -->
+							<!-- Pinterest -->
+							<!-- StumbleUpon-->
+							<!-- Email -->
+						</div>
 					</div>
 					<div class="row">
-					<div class="col-sm-12">
-					
-						<!-- Embed Code -->
-						<br/>
-						<a class="embedButton btn" data-toggle="modal" data-target="#myModal">Embed</a>
-						<!-- Modal -->
-						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						  <div class="modal-dialog">
-							<div class="modal-content">
-							  <div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h4 class="modal-title" id="myModalLabel">Embed</h4>
-							  </div>
-							  <div class="modal-body" align="left">
-								Copy & paste the code below for embedding in your site.. <br/>
-								  <blockquote>
-								  <p class="highlight" style="font-size:12px;">
-									&lt;div id="outerBox" align="center" style="width:320px"&gt;&lt;a href="http://fibonacciclock-ranji2612.rhcloud.com/" target="_blank" style="text-decoration: none;"&gt;&lt;canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;"&gt;Your browser does not support the HTML5 canvas tag.&lt;/canvas&gt;&lt;strong&gt;Fibonacci Clock&lt;/strong&gt;&lt;/a&gt;&lt;/div&gt;&lt;script src="http://fibonacciclock-ranji2612.rhcloud.com/fillColor.js" type="text/javascript"&gt;&lt;/script&gt; 
-								</p>
-								</blockquote>
-							  </div>
-							  <div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<div class="col-sm-12">
+
+							<!-- Embed Code -->
+							<br/>
+							<a class="embedButton btn" data-toggle="modal" data-target="#myModal">Embed</a>
+							<!-- Modal -->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">Embed</h4>
+								  </div>
+								  <div class="modal-body" align="left">
+									Copy & paste the code below for embedding in your site.. <br/>
+									  <blockquote>
+									  <p class="highlight" style="font-size:12px;">
+										&lt;div id="outerBox" align="center" style="width:320px"&gt;&lt;a href="http://fibonacciclock-ranji2612.rhcloud.com/" target="_blank" style="text-decoration: none;"&gt;&lt;canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;"&gt;Your browser does not support the HTML5 canvas tag.&lt;/canvas&gt;&lt;strong&gt;Fibonacci Clock&lt;/strong&gt;&lt;/a&gt;&lt;/div&gt;&lt;script src="http://fibonacciclock-ranji2612.rhcloud.com/fillColor.js" type="text/javascript"&gt;&lt;/script&gt; 
+									</p>
+									</blockquote>
+								  </div>
+								  <div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								  </div>
+								</div>
 							  </div>
 							</div>
-						  </div>
-						</div>
-						<!-- Digg -->
-						<!-- Reddit -->
-						<!-- LinkedIn -->
-						<!-- Pinterest -->
-						<!-- StumbleUpon-->
-						<!-- Email -->
+							
+							
 
-						</div>
+							</div>
 					</div>
 					</div>
 					
+				</div>
+				<div class="col-xs-12 col-sm-12" align="center">
+					<h4 class="sectionTitle">Inspiration</strong></h4>
+					<a href="https://www.kickstarter.com/projects/basbrun/fibonacci-clock-an-open-source-clock-for-nerds-wit" target="_blank" style="text-decoration: none;"><h5><strong>Fibonacci Clock - An open source clock for nerds with style</strong> - by Philippe Chrétien</h5></a><br/>
+					
+					<iframe width="80%"  id="iframe" height="100%" src="https://www.kickstarter.com/projects/basbrun/fibonacci-clock-an-open-source-clock-for-nerds-wit/widget/video.html" frameborder="0" scrolling="no" onload='javascript:resizeIframe();'> </iframe>
+					
+				</div>
+			</div>
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<br/><hr/>
+					<h4 class="sectionTitle"><strong>How to tell time</strong></h4>
+					<p align="justify">&nbsp;&nbsp;&nbsp;The Fibonacci sequence is a sequence of numbers created by the Italian mathematician Fibonacci in the 13th century. This is a sequence starting with 1 and 1, where each subsequent number is the sum of the previous two. For the clock I used the first 5 terms: 1, 1, 2, 3 and 5.   <br/><br/>
+
+&nbsp;&nbsp;&nbsp;The screen of the clock is made up of five squares whose side lengths match the first five Fibonacci numbers: 1, 1, 2, 3 and 5. The hours are displayed using red and the minutes using green. When a square is used to display both the hours and minutes it turns blue. White squares are ignored. <br/><br/>
+
+&nbsp;&nbsp;&nbsp;To tell time on the Fibonacci clock you need to do some math. To read the hour, simply add up the corresponding values of the red and blue squares. To read the minutes, do the same with the green and blue squares. The minutes are displayed in 5 minute increments (0 to 12) so you have to multiply your result by 5 to get the actual number. </p>
+					<br/>
+					<div align="center" >
+						<img src="howToTellTime.png">
+					</div>
 				</div>
 			</div>
 		</div>
