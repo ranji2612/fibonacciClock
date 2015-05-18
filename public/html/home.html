@@ -64,13 +64,19 @@
 		padding-top: 20px;
 		padding-bottom: 5px;
 	}
+	.fb_iframe_widget,
+	.fb_iframe_widget span,
+	.fb_iframe_widget span iframe[style] {
+	  min-width: 100% !important;
+	  width: 100% !important;
+	}
 
 	</style>
 	<script src="js/jquery.min.js"></script>
 	
 	<script language="javascript" type="text/javascript">
 	function resizeIframe() {
-		document.getElementById('iframe').height = 0.75 * document.getElementById('iframe').offsetWidth;
+		document.getElementById('iframe').height = 0.75 * document.getElementById('iframe').offsetWidth;		
 	}
     function resize_canvas(){
 			plotTimeNow();
@@ -92,6 +98,8 @@
 	<base href="/">
 </head>
 <body onresize="resize_canvas()" onload="timeoutStart()">
+	<!--  FB Comments -->
+	<div id="fb-root"></div>
 	<!--  FB Share -->
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -124,92 +132,92 @@
 			<br/><br/><br/><br/><br/>
 			
 			<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-8">
-				<div class="row">
-					<div class="col-xs-12 col-sm-12"  id="outerBox" align="center">
-						<br/><br/>
-						<canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;">
-	Your browser does not support the HTML5 canvas tag.
-	</canvas>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4">
-			<div class="row">
-				
-				<div class="col-xs-12 col-sm-12" align="center">
+				<div class="col-xs-12 col-sm-12 col-md-8">
 					<div class="row">
-					<div class="col-sm-12">
-						<h4 class="sectionTitle">Share</h4>
-						<div id="share-buttons">
-
-							<!-- Facebook -->
-							<div class="fb-share-button" data-href="http://fibonacciclock-ranji2612.rhcloud.com/" data-layout="button_count"></div> &nbsp;&nbsp;
-
-							<!-- Twitter -->
-							<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://fibonacciclock-ranji2612.rhcloud.com/" data-text="Check this awesome Fibonacci Clock" data-via="ranji2612">Tweet</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>&nbsp;&nbsp;
-
-							<!-- Google+ -->
-							<!-- Place this tag where you want the share button to render. -->
-							<div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://fibonacciclock-ranji2612.rhcloud.com/"></div>
-							
-							<!-- GitHub 
-							&nbsp;&nbsp;<iframe src="https://ghbtns.com/github-btn.html?user=ranji2612&repo=fibonacciclock&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe> -->
-							
-							<!-- Digg -->
-							<!-- Reddit -->
-							<!-- LinkedIn -->
-							<!-- Pinterest -->
-							<!-- StumbleUpon-->
-							<!-- Email -->
+						<div class="col-xs-12 col-sm-12"  id="outerBox" align="center">
+							<br/><br/>
+							<canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;">
+		Your browser does not support the HTML5 canvas tag.
+		</canvas>
 						</div>
 					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4">
 					<div class="row">
-						<div class="col-sm-12">
 
-							<!-- Embed Code -->
-							<br/>
-							<a class="embedButton btn" data-toggle="modal" data-target="#myModal">Embed</a>
-							<!-- Modal -->
-							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							  <div class="modal-dialog">
-								<div class="modal-content">
-								  <div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h4 class="modal-title" id="myModalLabel">Embed</h4>
-								  </div>
-								  <div class="modal-body" align="left">
-									Copy & paste the code below for embedding in your site.. <br/>
-									  <blockquote>
-									  <p class="highlight" style="font-size:12px;">
-										&lt;div id="outerBox" align="center" style="width:320px"&gt;&lt;a href="http://fibonacciclock-ranji2612.rhcloud.com/" target="_blank" style="text-decoration: none;"&gt;&lt;canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;"&gt;Your browser does not support the HTML5 canvas tag.&lt;/canvas&gt;&lt;strong&gt;Fibonacci Clock&lt;/strong&gt;&lt;/a&gt;&lt;/div&gt;&lt;script src="http://fibonacciclock-ranji2612.rhcloud.com/fillColor.js" type="text/javascript"&gt;&lt;/script&gt; 
-									</p>
-									</blockquote>
-								  </div>
-								  <div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								  </div>
+						<div class="col-xs-12 col-sm-12" align="center">
+							<div class="row">
+							<div class="col-sm-12">
+								<h4 class="sectionTitle">Share</h4>
+								<div id="share-buttons">
+
+									<!-- Facebook -->
+									<div class="fb-share-button" data-href="http://fibonacciclock-ranji2612.rhcloud.com/" data-layout="button_count"></div> &nbsp;&nbsp;
+
+									<!-- Twitter -->
+									<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://fibonacciclock-ranji2612.rhcloud.com/" data-text="Check this awesome Fibonacci Clock" data-via="ranji2612">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>&nbsp;&nbsp;
+
+									<!-- Google+ -->
+									<!-- Place this tag where you want the share button to render. -->
+									<div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://fibonacciclock-ranji2612.rhcloud.com/"></div>
+
+									<!-- GitHub 
+									&nbsp;&nbsp;<iframe src="https://ghbtns.com/github-btn.html?user=ranji2612&repo=fibonacciclock&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe> -->
+
+									<!-- Digg -->
+									<!-- Reddit -->
+									<!-- LinkedIn -->
+									<!-- Pinterest -->
+									<!-- StumbleUpon-->
+									<!-- Email -->
 								</div>
-							  </div>
 							</div>
-							
-							
+							<div class="row">
+								<div class="col-sm-12">
 
+									<!-- Embed Code -->
+									<br/>
+									<a class="embedButton btn" data-toggle="modal" data-target="#myModal">Embed</a>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									  <div class="modal-dialog">
+										<div class="modal-content">
+										  <div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">Embed</h4>
+										  </div>
+										  <div class="modal-body" align="left">
+											Copy & paste the code below for embedding in your site.. <br/>
+											  <blockquote>
+											  <p class="highlight" style="font-size:12px;">
+												&lt;div id="outerBox" align="center" style="width:320px"&gt;&lt;a href="http://fibonacciclock-ranji2612.rhcloud.com/" target="_blank" style="text-decoration: none;"&gt;&lt;canvas id="myCanvas"  width="800" height="500" style="border:0px solid #EEE;"&gt;Your browser does not support the HTML5 canvas tag.&lt;/canvas&gt;&lt;strong&gt;Fibonacci Clock&lt;/strong&gt;&lt;/a&gt;&lt;/div&gt;&lt;script src="http://fibonacciclock-ranji2612.rhcloud.com/fillColor.js" type="text/javascript"&gt;&lt;/script&gt; 
+											</p>
+											</blockquote>
+										  </div>
+										  <div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										  </div>
+										</div>
+									  </div>
+									</div>
+
+
+
+									</div>
 							</div>
+							</div>
+
+						</div>
+						<div class="col-xs-12 col-sm-12" align="center">
+							<h4 class="sectionTitle">Inspiration</strong></h4>
+							<a href="https://www.kickstarter.com/projects/basbrun/fibonacci-clock-an-open-source-clock-for-nerds-wit" target="_blank" style="text-decoration: none;"><h5><strong>Fibonacci Clock - An open source clock for nerds with style</strong> - by Philippe Chrétien</h5></a><br/>
+
+							<iframe width="80%"  id="iframe" height="100%" src="https://www.kickstarter.com/projects/basbrun/fibonacci-clock-an-open-source-clock-for-nerds-wit/widget/video.html" frameborder="0" scrolling="no" onload='javascript:resizeIframe();'> </iframe>
+
+						</div>
 					</div>
-					</div>
-					
 				</div>
-				<div class="col-xs-12 col-sm-12" align="center">
-					<h4 class="sectionTitle">Inspiration</strong></h4>
-					<a href="https://www.kickstarter.com/projects/basbrun/fibonacci-clock-an-open-source-clock-for-nerds-wit" target="_blank" style="text-decoration: none;"><h5><strong>Fibonacci Clock - An open source clock for nerds with style</strong> - by Philippe Chrétien</h5></a><br/>
-					
-					<iframe width="80%"  id="iframe" height="100%" src="https://www.kickstarter.com/projects/basbrun/fibonacci-clock-an-open-source-clock-for-nerds-wit/widget/video.html" frameborder="0" scrolling="no" onload='javascript:resizeIframe();'> </iframe>
-					
-				</div>
-			</div>
-			</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
@@ -225,6 +233,15 @@
 						<img src="howToTellTime.png">
 					</div>
 				</div>
+			</div>
+			<!-- FB Comments -->
+			<div class="row" align="center">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+					<br/><hr/>
+
+					<div class="fb-comments" data-width="100%" data-href="http://fibonacciclock-ranji2612.rhcloud.com/" data-numposts="5" data-colorscheme="light"></div>
+				</div>
+				
 			</div>
 		</div>
 	</div>
