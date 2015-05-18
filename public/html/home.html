@@ -6,7 +6,7 @@
 	<meta property="og:title" content="Fibonacci Clock"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:description" content="Time shown in a geeky fibonacci clock. A fun, cool and an awesome way of showing time. "/>
-	<meta property="og:image" content="favicon32.png"/><meta>
+	<meta property="og:image" content="http://fibonacciclock-ranji2612.rhcloud.com/sample.PNG"/><meta>
 	<!---->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
@@ -71,19 +71,27 @@
 	<script language="javascript" type="text/javascript">
 	function resizeIframe() {
 		document.getElementById('iframe').height = 0.75 * document.getElementById('iframe').offsetWidth;
-		
 	}
     function resize_canvas(){
 			plotTimeNow();
 			resizeIframe();
-        }
+    }
+	function timeoutStart() {
+		var d = new Date();
+		var rem = 5 - d.getMinutes()%5;
+		console.log('Will ref in '+rem);
+		setTimeout( function() {
+			plotTimeNow();
+			setInterval(function() { plotTimeNow(); },5*60*1000);
+		}, (rem*60 - d.getSeconds())*1000 + 2);
+	}
 	</script>
 	<script type="text/javascript">
 	
     </script>
 	<base href="/">
 </head>
-<body onresize="resize_canvas()">
+<body onresize="resize_canvas()" onload="timeoutStart()">
 	<!--  FB Share -->
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {

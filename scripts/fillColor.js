@@ -80,8 +80,6 @@ var drawClock = function(resColor) {
 }
 
 var plotTimeNow = function() {
-	console.log('Time updated at ',Date.now());
-			
 	var d = new Date();
 	var hList = getFibonacciNumbers( d.getHours()%12);
 	var mList = getFibonacciNumbers( parseInt(d.getMinutes()/5));
